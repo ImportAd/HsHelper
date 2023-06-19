@@ -1,22 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hs_helper/config/colors.dart';
 import 'package:hs_helper/screens/home/home_controller.dart';
+import 'package:hs_helper/screens/secrets/mage.dart';
+import 'package:hs_helper/screens/secrets/hunter.dart';
+import 'package:hs_helper/screens/secrets/rogue.dart';
 
-class Other extends StatelessWidget {
-  Other({super.key});
-  final Controller c = Get.find();
+class SecretsScreen extends StatelessWidget {
+  const SecretsScreen({super.key});
 
   @override
-  Widget build(context){
+  Widget build(context) {
+    Get.put(Controller());
     final TextTheme textTheme = Theme.of(context).textTheme;
-     return Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text("Secrets screen",
-                     style: textTheme.bodyLarge,),
+        title: Text(
+          "Secrets screen",
+          style: textTheme.titleLarge,
+        ),
+        backgroundColor: AppColors.backgroundBlack,
+        elevation: 0,
+        centerTitle: true,
       ),
       body: Center(
-        child: Text("${c.count}",),
-      ),
+          child: Column(
+        children: [
+          TextButton(
+              onPressed: () => Get.to(const MageSecretsScreen()),
+              child: Text(
+                "Mage",
+                style: textTheme.bodyMedium,
+              )),
+          TextButton(
+              onPressed: () => Get.to(const HunterSecretsScreen()),
+              child: Text(
+                "Hunter",
+                style: textTheme.bodyMedium,
+              )),
+          TextButton(
+              onPressed: () => Get.to(const RogueSecretsScreen()),
+              child: Text(
+                "Rogue",
+                style: textTheme.bodyMedium,
+              )),
+        ],
+      )),
     );
   }
 }
