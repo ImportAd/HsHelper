@@ -34,4 +34,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/secrets/mage/
+    - assets/secrets/hunter/
+    - assets/secrets/rogue/
