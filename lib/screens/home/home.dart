@@ -13,13 +13,13 @@ class App extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "Home screen",
-            style: textTheme.titleMedium,
-          ),
+        title: Text(
+          "Home screen",
+          style: textTheme.titleLarge,
         ),
         backgroundColor: AppColors.backgroundBlack,
+        elevation: 0,
+        centerTitle: true,
       ),
       body: Center(
         child: TextButton(
@@ -27,7 +27,7 @@ class App extends StatelessWidget {
               "Secrets",
               style: textTheme.headlineLarge,
             ),
-            onPressed: () => Get.to(Other())),
+            onPressed: () => Get.to(const SecretsScreen())),
       ),
     );
   }
