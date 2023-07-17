@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hs_helper/config/colors.dart';
-import 'package:hs_helper/screens/secrets/secrets_mage.dart';
+import 'package:hs_helper/screens/mage/secrets.dart';
 
 class MageScreen extends StatelessWidget {
   const MageScreen({super.key});
