@@ -13,12 +13,14 @@ dependencies:
     sdk: flutter
   auto_route: ^6.3.0
   get: ^4.6.5
+  dio: ^4.0.6
 
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   auto_route_generator: ^6.2.0
 
   flutter_lints: ^2.0.0
