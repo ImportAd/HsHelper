@@ -1,13 +1,33 @@
+# имя Flutter приложения
+# обычно данное имя используется в качестве
+# названия pub-пакета. Это важно лишь в том случае,
+# если вы разрабатываете свой pub-пакет и собираетесь
+# выложить его в общий доступ
+# как я уже отметил имя Android и iOS приложения впоследствии
+# можно будет изменить отдельно для каждой из платформ
 name: hs_helper
+
+# краткое описание на английском
 description: HsHelper project.
 
+# я не собираюсь опубликовывать pub-пакет
+# и поэтому
+# запрещаем команду flutter publish
 publish_to: 'none' 
 
+# версия Android и iOS приложения
+# состоит из 2 частей, разделенных знаком плюса
+# первая часть - это имя версии, которое будет
+# видно для пользователей, например 1.1.5
+# вторая часть позволяет Google Play и Apple Store
+# отличать разные версии нашего приложения
 version: 1.0.0+1
 
+# версия Dart SDK
 environment:
   sdk: '>=2.19.2 <3.0.0'
 
+# блок зависимостей
 dependencies:
   flutter:
     sdk: flutter
@@ -15,8 +35,13 @@ dependencies:
   get: ^4.6.5
   dio: ^4.0.6
 
+  # использование иконок для Cupertino компонентов
+  # Cupertino компоненты - это компоненты в стили iOS
   cupertino_icons: ^1.0.2
 
+
+# зависимости для разработки
+# в данном случае подключено тестирование
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -25,6 +50,8 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
 
+
+
 flutter_icons:
   android: true
   ios: true
@@ -32,7 +59,13 @@ flutter_icons:
   image_path: "assets/img/launch_icon/appstore.png"
   flutter_lints: ^2.0.0
 
+
+# в данной секции вы можете подключить шрифты и assets файлы
 flutter:
+
+  # Следующая строка гарантирует, что шрифт Material Icons включен
+  # в ваше приложение, чтобы вы могли использовать значки 
+  # в классе материалов Icons.
   uses-material-design: true
 
   assets:
