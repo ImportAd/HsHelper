@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hs_helper/config/colors.dart';
-import 'package:hs_helper/config/images.dart';
 
 class HunterSecretsScreen extends StatelessWidget {
   const HunterSecretsScreen({super.key});
