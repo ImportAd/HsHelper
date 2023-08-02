@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:hs_helper/config/colors.dart';
 import 'package:hs_helper/config/constants.dart';
 
+// ToDo: стр 37
+// узнать на стековер как это прокинуть через лист классов
+// см экран classes и constants
+// добавить linck в gitignore
+
 class App extends StatelessWidget {
   const App({super.key});
   @override
@@ -32,11 +37,12 @@ class App extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 16),
                         child: TextButton(
                             child: Text(
-                              AppConstants.characterSheet[index],
+                              AppConstants.characterSheet[index].name,
                               style: textTheme.headlineLarge,
                             ),
-                            onPressed: () => Get.to(
-                                AppConstants.characterScreenSheet[index])),
+                            // onPressed: () => Get.to(
+                            //     AppConstants.characterScreenSheet[index])),
+                            onPressed: () => Get.to(const App())),
                       );
                     }),
               )
