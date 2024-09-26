@@ -41,7 +41,6 @@ dependencies:
 
 
 # зависимости для разработки
-# в данном случае подключено тестирование
 dev_dependencies:
   flutter_test:
     sdk: flutter

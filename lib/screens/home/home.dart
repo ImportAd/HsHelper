@@ -40,9 +40,8 @@ class App extends StatelessWidget {
                               AppConstants.characterSheet[index].name,
                               style: textTheme.headlineLarge,
                             ),
-                            // onPressed: () => Get.to(
-                            //     AppConstants.characterScreenSheet[index])),
-                            onPressed: () => Get.to(const App())),
+                            onPressed: () => Get.to(
+                                AppConstants.characterSheet[index].screen)),
                       );
                     }),
               )
